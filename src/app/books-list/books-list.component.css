@@ -1,0 +1,8 @@
+.books-list .section-title{color: #000;font-size: 40px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center;}
+.books-list .book-title{font-weight: bold;font-size: 28px}
+.books-list .book-details{font-size:22px}
+.books-list .actions{font-size:18px}
+.books-list .actions .fa-trash-o{margin-left:15px}
+.books-list .add-book{margin-left:20px;font-size:16px}
+.books-list .del-book-valid{color:#ffffff;margin-left:10px;background:red;padding:3px 3px 3px 3px;border-radius:3px}
+.books-list .del-book-valid a{color:#ffffff}

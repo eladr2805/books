@@ -1,0 +1,25 @@
+<div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div *ngIf="booksList" class="books-list">
+                    <div class="col-xs-12"><span class="section-title">Books list</span><span class="add-book"><i class="fa fa-plus" aria-hidden="true"></i>
+ <a href="javascript:void(0)" (click)="addBook()">Add book</a></span></div>
+                    <div class="col-md-6" *ngFor="let item of booksList.books; let i = index" [attr.data-index]="i">
+                        <div class="blockquote-box blockquote-info fadeInLeft clearfix">
+                            <h4 class="book-title">
+                                {{item.title | formatTitle}}
+                            </h4>
+                            <p class="book-details">
+                                {{item.author}}, {{item.date}}
+                        </p>
+                        <div class="actions">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+ <a href="javascript:void(0)" (click)="editBook(i)">Edit</a>  <i class="fa fa-trash-o" aria-hidden="true"></i>
+ <a href="javascript:void(0)" (click)="preDeleteBook(i)">Delete</a><span *ngIf="show === i" class="del-book-valid">Are you sure? <a href="javascript:void(0)" (click)="deleteBook(i)">Yes</a> | <a href="javascript:void(0)" (click)="cancel(i)">No</a></span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+</div>
